@@ -20,4 +20,5 @@
 .mode {
     font-size: 2rem;
     text-align: center;
+    cursor: pointer;
 }
