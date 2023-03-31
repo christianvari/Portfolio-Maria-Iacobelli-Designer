@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 3fr 8fr 2fr 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+}
+:global(.custom-theme-dark) .line {
+    background: #fff;
+}
+:global(.custom-theme-light) .line {
+    background: #000;
+}
+.line {
+    height: 0.1rem;
+    width: 100%;
+}
+:global(.custom-theme-dark) .mode {
+    color: #fff;
+}
+.mode {
+    font-size: 2rem;
+    text-align: center;
+}

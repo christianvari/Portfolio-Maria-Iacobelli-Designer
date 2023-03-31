@@ -1,0 +1,12 @@
+.link {
+    cursor: pointer;
+    text-align: center;
+}
+
+:global(.custom-theme-dark) span {
+    color: #fff;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}

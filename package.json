@@ -15,7 +15,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@mdx-js/react": "^2.3.0",
+    "@mui/material": "^5.11.15",
     "gatsby": "^5.8.0",
     "gatsby-plugin-google-gtag": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
@@ -26,6 +29,7 @@
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
   }
 }
