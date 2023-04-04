@@ -1,0 +1,12 @@
+.custom-theme-dark h1,
+.custom-theme-dark h2,
+.custom-theme-dark h3,
+.custom-theme-dark h4,
+.custom-theme-dark h5,
+.custom-theme-dark h6,
+.custom-theme-dark p {
+    color: #fff;
+}
+body {
+    font-family: "Gentium Plus";
+}

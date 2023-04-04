@@ -19,7 +19,9 @@
     "@emotion/styled": "^11.10.6",
     "@mdx-js/react": "^2.3.0",
     "@mui/material": "^5.11.15",
+    "fluent-mailto": "^1.0.2",
     "gatsby": "^5.8.0",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-google-gtag": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
@@ -27,9 +29,12 @@
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-plugin-sitemap": "^6.8.0",
     "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-transformer-json": "^5.8.0",
+    "gatsby-transformer-remark": "^6.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0"
   }
 }

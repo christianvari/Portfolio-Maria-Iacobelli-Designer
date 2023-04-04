@@ -44,7 +44,7 @@ class ThemeProvider extends React.Component {
                     toggleDark: this.toggleDark,
                 }}
             >
-                <main className={dark ? "custom-theme-dark" : "custom-theme-light"}>
+                <div className={dark ? "custom-theme-dark" : "custom-theme-light"}>
                     <GlobalStyles
                         styles={{
                             body: {
@@ -56,7 +56,7 @@ class ThemeProvider extends React.Component {
                         }}
                     />
                     {children}
-                </main>
+                </div>
             </ThemeContext.Provider>
         );
     }

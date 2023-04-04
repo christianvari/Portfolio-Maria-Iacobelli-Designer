@@ -1,0 +1,16 @@
+[
+    {
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/christianvari/"
+    },
+    {
+        "title": "Instagram",
+        "link": "https://www.instagram.com/decentralized_christian/"
+    },
+    {
+        "title": "Mail",
+        "to": "info@christianvari.dev",
+        "subject": "Enter your request subject here",
+        "body": "Enter your detailed request here"
+    }
+]

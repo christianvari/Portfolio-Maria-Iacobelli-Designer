@@ -43,5 +43,34 @@ module.exports = {
             },
             __key: "pages",
         },
+        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `markdown`,
+                path: "./src/markdown/",
+            },
+        },
+        `gatsby-transformer-json`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `data`,
+                path: "./src/data/",
+            },
+        },
+        {
+            resolve: `gatsby-omni-font-loader`,
+            options: {
+                enableListener: true,
+                preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+                web: [
+                    {
+                        name: `Gentium Plus`,
+                        file: `https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap`,
+                    },
+                ],
+            },
+        },
     ],
 };

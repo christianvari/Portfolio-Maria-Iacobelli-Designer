@@ -29,6 +29,7 @@ function Header({}) {
             <div className={styles.line} />
             <div className="">
                 <GatsbyImage
+                    alt=""
                     image={
                         dark
                             ? data.logoDark.childImageSharp.gatsbyImageData

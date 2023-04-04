@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+    justify-content: end;
+}
+:global(.custom-theme-dark) .container {
+    color: #fff;
+}
+:global(.custom-theme-light) .container {
+    color: #000;
+}
+
+.container svg {
+    cursor: pointer;
+}
