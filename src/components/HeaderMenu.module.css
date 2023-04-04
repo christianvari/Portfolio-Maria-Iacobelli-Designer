@@ -3,10 +3,18 @@
     text-align: center;
 }
 
-:global(.custom-theme-dark) span {
-    color: #fff;
-}
 .container {
     display: flex;
     justify-content: space-evenly;
+}
+
+.selected span {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.5rem;
+    text-decoration-color: #feb2cb;
+}
+
+:global(.custom-theme-dark) .selected span {
+    text-decoration-color: #1242a7;
 }

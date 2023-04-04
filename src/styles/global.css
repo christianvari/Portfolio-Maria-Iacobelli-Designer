@@ -4,7 +4,8 @@
 .custom-theme-dark h4,
 .custom-theme-dark h5,
 .custom-theme-dark h6,
-.custom-theme-dark p {
+.custom-theme-dark p,
+.custom-theme-dark span {
     color: #fff;
 }
 body {

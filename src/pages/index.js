@@ -22,8 +22,6 @@ const IndexPage = () => {
         }
     `);
 
-    console.log(data);
-
     return (
         <Wrapper>
             <div className={styles.hero}>
