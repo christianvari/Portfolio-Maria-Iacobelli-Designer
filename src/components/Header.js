@@ -7,7 +7,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import HeaderMenu from "./HeaderMenu";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 
-function Header({}) {
+function Header({ location }) {
     const { dark, toggleDark } = useContext(ThemeContext);
     const data = useStaticQuery(graphql`
         {
@@ -38,7 +38,7 @@ function Header({}) {
                 />
             </div>
             <div className={styles.line} />
-            <HeaderMenu />
+            <HeaderMenu location={location} />
             <div className={styles.line} />
             <div onClick={toggleDark} className={styles.mode}>
                 {dark ? <MdOutlineLightMode /> : <MdDarkMode />}

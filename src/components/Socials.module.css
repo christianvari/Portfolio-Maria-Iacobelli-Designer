@@ -10,7 +10,6 @@
 :global(.custom-theme-light) .container {
     color: #000;
 }
-
 .container svg {
     cursor: pointer;
 }

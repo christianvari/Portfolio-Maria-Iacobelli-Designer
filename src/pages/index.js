@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.css";
 import Socials from "../components/Socials";
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
     const data = useStaticQuery(graphql`
         {
             hero: file(relativePath: { eq: "hero.png" }) {
@@ -23,7 +23,7 @@ const IndexPage = () => {
     `);
 
     return (
-        <Wrapper>
+        <Wrapper location={location}>
             <div className={styles.hero}>
                 <GatsbyImage alt="" image={data.hero.childImageSharp.gatsbyImageData} />
                 <div

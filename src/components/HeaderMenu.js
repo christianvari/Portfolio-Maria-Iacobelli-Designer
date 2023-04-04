@@ -3,8 +3,8 @@ import * as styles from "./HeaderMenu.module.css";
 import { navigate } from "gatsby";
 import { withPrefix } from "gatsby";
 
-function HeaderMenu() {
-    const currentPage = withPrefix(window.location.pathname);
+function HeaderMenu({ location }) {
+    const currentPage = withPrefix(location.pathname);
     return (
         <div className={styles.container}>
             <div

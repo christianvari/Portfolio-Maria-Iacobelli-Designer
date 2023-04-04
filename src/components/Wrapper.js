@@ -4,11 +4,11 @@ import { ThemeProvider } from "../context/ThemeContext";
 import "../styles/global.css";
 import * as styles from "./Wrapper.module.css";
 
-function Wrapper({ children }) {
+function Wrapper({ location, children }) {
     return (
         <ThemeProvider>
             <>
-                <Header />
+                <Header location={location} />
                 <main className={styles.container}>{children}</main>
             </>
         </ThemeProvider>
