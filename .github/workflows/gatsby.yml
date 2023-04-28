@@ -12,6 +12,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env: 
+  KONTENT_PROJECT_ID: ${{ secrets.KONTENT_PROJECT_ID }}
+  CLARITY_ID: ${{ secrets.CLARITY_ID }}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read

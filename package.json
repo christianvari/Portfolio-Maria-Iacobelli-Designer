@@ -17,6 +17,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@kontent-ai/gatsby-components": "^10.0.0",
+    "@kontent-ai/gatsby-source": "^10.0.0",
     "@mdx-js/react": "^2.3.0",
     "@mui/material": "^5.11.15",
     "fluent-mailto": "^1.0.2",

@@ -60,6 +60,13 @@ module.exports = {
             },
         },
         {
+            resolve: `@kontent-ai/gatsby-source`,
+            options: {
+                projectId: process.env.KONTENT_PROJECT_ID,
+                languageCodenames: [`en-US`],
+            },
+        },
+        {
             resolve: `gatsby-omni-font-loader`,
             options: {
                 enableListener: true,

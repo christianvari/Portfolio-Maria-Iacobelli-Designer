@@ -1,43 +1,30 @@
 import * as React from "react";
 import Wrapper from "../components/Wrapper";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.css";
 import Socials from "../components/Socials";
 
-const IndexPage = ({ location }) => {
-    const data = useStaticQuery(graphql`
-        {
-            hero: file(relativePath: { eq: "hero.png" }) {
-                childImageSharp {
-                    gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-                }
-            }
-            markdownRemark(frontmatter: { id: { eq: "hero" } }) {
-                html
-            }
-            about: markdownRemark(frontmatter: { id: { eq: "about-me" } }) {
-                html
-            }
-        }
-    `);
+const IndexPage = ({ location, data }) => {
+    console.log(data);
+    const { home } = data;
 
     return (
         <Wrapper location={location}>
             <div className={styles.hero}>
-                <GatsbyImage alt="" image={data.hero.childImageSharp.gatsbyImageData} />
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: data.markdownRemark.html,
-                    }}
+                <GatsbyImage
+                    alt={home.image.alt}
+                    image={getImage(home.image.gatsbyImageData)}
                 />
+                <div>
+                    <h2>{home.greetings}</h2>
+                    <h1>{home.hero}</h1>
+                </div>
             </div>
-            <div
-                className={styles.description}
-                dangerouslySetInnerHTML={{
-                    __html: data.about.html,
-                }}
-            />
+            <div className={styles.desc}>
+                <p>{home.description}</p>
+                <p style={{ fontStyle: "italic" }}>{home.subdescription}</p>
+            </div>
             <div>
                 <Socials />
             </div>
@@ -46,3 +33,19 @@ const IndexPage = ({ location }) => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+    {
+        home {
+            description
+            subdescription
+            greetings
+            hero
+            image {
+                id
+                gatsbyImageData
+                alt
+            }
+        }
+    }
+`;
