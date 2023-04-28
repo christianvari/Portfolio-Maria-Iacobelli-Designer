@@ -44,13 +44,6 @@ module.exports = {
             __key: "pages",
         },
         `gatsby-transformer-remark`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `markdown`,
-                path: "./src/markdown/",
-            },
-        },
         `gatsby-transformer-json`,
         {
             resolve: `gatsby-source-filesystem`,

@@ -8,7 +8,7 @@
 .hero img {
     max-height: 30vh;
 }
-.desc {
+.desc p {
     margin-top: 3rem;
     font-size: 1.2rem;
 }

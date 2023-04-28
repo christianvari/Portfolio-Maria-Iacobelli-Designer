@@ -22,8 +22,8 @@ const IndexPage = ({ location, data }) => {
                 </div>
             </div>
             <div className={styles.desc}>
-                <p>{home.description}</p>
-                <p style={{ fontStyle: "italic" }}>{home.subdescription}</p>
+                <p style={{ fontWeight: "bold" }}>{home.description}</p>
+                <p>{home.subdescription}</p>
             </div>
             <div>
                 <Socials />
