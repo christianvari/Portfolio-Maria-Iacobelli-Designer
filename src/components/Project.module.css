@@ -1,0 +1,31 @@
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+.right {
+    display: grid;
+}
+.right p {
+    color: #000;
+}
+.button {
+    background: #902eff;
+    height: 3rem;
+    width: 10rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+:global(.custom-theme-dark) .button {
+    background: #02023b;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

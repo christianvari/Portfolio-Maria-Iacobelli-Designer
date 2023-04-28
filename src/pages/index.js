@@ -1,6 +1,6 @@
 import * as React from "react";
 import Wrapper from "../components/Wrapper";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./index.module.css";
 import Socials from "../components/Socials";

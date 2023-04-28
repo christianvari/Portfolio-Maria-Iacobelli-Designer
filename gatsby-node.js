@@ -807,6 +807,15 @@ exports.createSchemaCustomization = async ({ actions }) => {
             subject: String
             body: String
         }
+
+        interface Project implements Node {
+            id: ID!
+            title: String
+            summary: String
+            color: String
+            subtitle: String
+            image: HomepageImage
+        }
         
         type kontent_item_home implements Node & Home @dontInfer {
             id: ID!
@@ -829,6 +838,16 @@ exports.createSchemaCustomization = async ({ actions }) => {
             to: String @proxy(from: "elements.to.value")
             subject: String @proxy(from: "elements.subject.value")
             body: String @proxy(from: "elements.body.value")
+        }
+
+        type kontent_item_project implements Node & Project @dontInfer {
+            id: ID!
+            title: String @proxy(from: "elements.title.value")
+            summary: String @proxy(from: "elements.summary.value")
+            color: String @proxy(from: "elements.color.value")
+            subtitle: String @proxy(from: "elements.subtitle.value")
+            image: HomepageImage @KontentImage
+
         }
         `,
     );
