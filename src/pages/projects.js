@@ -23,8 +23,6 @@ const ProjectsPage = ({ location }) => {
         }
     `);
 
-    console.log(data);
-
     return (
         <Wrapper location={location}>
             <div className={style.container}>

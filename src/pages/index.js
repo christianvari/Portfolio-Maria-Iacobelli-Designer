@@ -6,7 +6,6 @@ import * as styles from "./index.module.css";
 import Socials from "../components/Socials";
 
 const IndexPage = ({ location, data }) => {
-    console.log(data);
     const { home } = data;
 
     return (

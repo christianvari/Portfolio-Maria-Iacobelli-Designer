@@ -8,7 +8,6 @@ function Project({ data }) {
             <GatsbyImage
                 alt={data.image.alt}
                 image={getImage(data.image.gatsbyImageData)}
-                // imgStyle={{ height: "200px", width: "auto" }}
                 objectFit="scale-down"
             />
             <div className={style.right}>
