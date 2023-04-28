@@ -7,25 +7,32 @@ import { mail } from "fluent-mailto";
 function Socials() {
     const data = useStaticQuery(graphql`
         {
-            allSocialJson {
+            allSocial {
                 edges {
                     node {
-                        title
-                        link
-                        to
-                        subject
-                        body
+                        type
+                        url
                     }
                 }
+            }
+
+            email {
+                type
+                to
+                subject
+                body
             }
         }
     `);
 
+    const content = [...data.allSocial.edges.map((x) => x.node), data.email];
+    console.log(content);
+
     return (
         <div className={style.container}>
-            {data.allSocialJson.edges.map((node, i) => {
+            {content.map((node, i) => {
                 let Icon;
-                switch (node.node.title) {
+                switch (node.type) {
                     case "LinkedIn":
                         Icon = FaLinkedin;
                         break;
@@ -40,17 +47,17 @@ function Socials() {
                     <div
                         key={i}
                         onClick={() => {
-                            if (node.node.to) {
-                                window.open(
+                            if (node.to) {
+                                return window.open(
                                     mail
-                                        .to(node.node.to)
-                                        .subject(node.node.subject)
-                                        .body(node.node.body)
+                                        .to(node.to)
+                                        .subject(node.subject)
+                                        .body(node.body)
                                         .build(),
                                     "_blank",
                                 );
                             }
-                            window.open(node.node.link, "_blank");
+                            window.open(node.url, "_blank");
                         }}
                     >
                         <Icon />

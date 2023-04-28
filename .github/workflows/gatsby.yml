@@ -12,6 +12,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Allows external webhook trigger
+  repository_dispatch:
+    types:
+      - webhook
+
 env: 
   KONTENT_PROJECT_ID: ${{ secrets.KONTENT_PROJECT_ID }}
   CLARITY_ID: ${{ secrets.CLARITY_ID }}

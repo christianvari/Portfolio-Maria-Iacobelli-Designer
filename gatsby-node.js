@@ -793,6 +793,20 @@ exports.createSchemaCustomization = async ({ actions }) => {
             image: HomepageImage
             subdescription: String
         }
+
+        interface Social implements Node {
+            id: ID!
+            type: String
+            url: String
+        }
+
+        interface Email implements Node {
+            id: ID!
+            type: String
+            to: String
+            subject: String
+            body: String
+        }
         
         type kontent_item_home implements Node & Home @dontInfer {
             id: ID!
@@ -801,6 +815,20 @@ exports.createSchemaCustomization = async ({ actions }) => {
             greetings: String @proxy(from: "elements.greetings.value")
             hero: String @proxy(from: "elements.hero.value")
             image: HomepageImage @KontentImage
+        }
+
+        type kontent_item_social implements Node & Social @dontInfer {
+            id: ID!
+            type: String @proxy(from: "elements.type.value")
+            url: String @proxy(from: "elements.url.value")
+        }
+
+        type kontent_item_email implements Node & Email @dontInfer {
+            id: ID!
+            type: String @proxy(from: "elements.type.value")
+            to: String @proxy(from: "elements.to.value")
+            subject: String @proxy(from: "elements.subject.value")
+            body: String @proxy(from: "elements.body.value")
         }
         `,
     );
