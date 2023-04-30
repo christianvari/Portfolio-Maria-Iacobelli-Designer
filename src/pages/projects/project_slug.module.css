@@ -1,21 +1,23 @@
 .container {
     padding: 1rem;
     border-radius: 2rem;
-    width: min(100%, 1024px);
     display: grid;
 }
 .container img {
     max-height: 30rem;
 }
-.container p {
-    color: white;
-}
+
 .title {
     text-underline-offset: 2rem;
     text-decoration: underline;
 }
 .box {
+    width: min(100%, 1024px);
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.main {
+    display: flex;
+    align-items: center;
 }

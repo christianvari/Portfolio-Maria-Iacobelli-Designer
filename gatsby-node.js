@@ -816,6 +816,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
             color: String
             subtitle: String
             image: HomepageImage
+            content: [HomepageBlock]
+        }
+
+        interface ProjectOverview implements Node & HomepageBlock {
+            id: ID!
+            blocktype: String
+            title: String
+            description: String
         }
         
         type kontent_item_home implements Node & Home @dontInfer {
@@ -849,7 +857,15 @@ exports.createSchemaCustomization = async ({ actions }) => {
             color: String @proxy(from: "elements.color.value")
             subtitle: String @proxy(from: "elements.subtitle.value")
             image: HomepageImage @KontentImage
+            content: [HomepageBlock]
+                @KontentNodesFromElement(variableName: "content", type: "homepage_block")
+        }
 
+        type kontent_item_project_overview implements Node & ProjectOverview & kontent_item_homepage_block & HomepageBlock @dontInfer {
+            id: ID!
+            blocktype: String @blocktype
+            title: String @proxy(from: "elements.title.value")
+            description: String @proxy(from: "elements.description.value")
         }
         `,
     );

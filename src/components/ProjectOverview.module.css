@@ -1,0 +1,8 @@
+.container {
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.title {
+    text-underline-offset: 1rem;
+    text-decoration: underline;
+}
