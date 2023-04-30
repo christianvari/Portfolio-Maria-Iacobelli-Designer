@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 
 function Project({ data }) {
-    console.log(data);
     return (
         <div className={style.container}>
             <GatsbyImage

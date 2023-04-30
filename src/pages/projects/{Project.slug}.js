@@ -7,6 +7,7 @@ import * as sections from "../../components/sections";
 
 export default function Page({ location, data }) {
     const { project } = data;
+    console.log(project);
 
     return (
         <Wrapper location={location}>
@@ -30,11 +31,12 @@ export default function Page({ location, data }) {
                     </div>
                     {project.blocks.map((block) => {
                         const { id, blocktype, ...componentProps } = block;
-                        const Component = sections[blocktype];
+                        const Component = sections[blocktype] || null;
                         return (
                             <Component
                                 key={id}
                                 parentColor={project.color}
+                                parentSlug={project.slug}
                                 {...componentProps}
                             />
                         );
@@ -61,6 +63,7 @@ export const query = graphql`
                 id
                 blocktype
                 ...ProjectOverviewContent
+                ...ProjectSubsectionsContent
             }
         }
     }

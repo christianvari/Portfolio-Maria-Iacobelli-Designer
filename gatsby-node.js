@@ -825,6 +825,21 @@ exports.createSchemaCustomization = async ({ actions }) => {
             title: String
             description: String
         }
+
+        interface ProjectSubsection implements Node {
+            id: ID!
+            slug: String!
+            title: String
+            icon: HomepageImage
+            preview: String
+        }
+
+        interface ProjectSubsections implements Node & HomepageBlock {
+            id: ID!
+            blocktype: String
+            title: String
+            subsections: [ProjectSubsection]
+        }
         
         type kontent_item_home implements Node & Home @dontInfer {
             id: ID!
@@ -866,6 +881,21 @@ exports.createSchemaCustomization = async ({ actions }) => {
             blocktype: String @blocktype
             title: String @proxy(from: "elements.title.value")
             description: String @proxy(from: "elements.description.value")
+        }
+
+        type kontent_item_project_subsection implements Node & ProjectSubsection @dontInfer {
+            id: ID!
+            slug: String! @proxy(from: "elements.slug.value")
+            title: String @proxy(from: "elements.title.value")
+            icon: HomepageImage @KontentImage(variableName: "icon")
+            preview: String @proxy(from: "elements.preview.value")
+        }
+
+        type kontent_item_project_subsections implements Node & ProjectSubsections & kontent_item_homepage_block & HomepageBlock @dontInfer {
+            id: ID!
+            blocktype: String @blocktype
+            title: String @proxy(from: "elements.title.value")
+            subsections: [ProjectSubsection] @KontentNodesFromElement(variableName: "subsections", type: "project_subsection")
         }
         `,
     );

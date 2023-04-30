@@ -1,0 +1,14 @@
+.container {
+    padding: 1rem;
+}
+.sectionsContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+.sectionsContainer img {
+    cursor: pointer;
+}
+.item {
+    max-width: 20%;
+}

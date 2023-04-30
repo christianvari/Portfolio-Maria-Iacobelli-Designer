@@ -6,7 +6,6 @@
 .container img {
     max-height: 30rem;
 }
-
 .title {
     text-underline-offset: 2rem;
     text-decoration: underline;
@@ -19,5 +18,5 @@
 }
 .main {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
