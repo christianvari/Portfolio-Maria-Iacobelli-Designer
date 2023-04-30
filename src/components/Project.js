@@ -1,8 +1,10 @@
 import React from "react";
 import * as style from "./Project.module.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
 
 function Project({ data }) {
+    console.log(data);
     return (
         <div className={style.container}>
             <GatsbyImage
@@ -14,7 +16,12 @@ function Project({ data }) {
                 <p style={{ fontWeight: "bold" }}>{data.title}</p>
                 <p style={{ fontSize: "1.5rem" }}>{data.subtitle}</p>
                 <p>{data.summary}</p>
-                <div className={style.buttonContainer}>
+                <div
+                    className={style.buttonContainer}
+                    onClick={() => {
+                        navigate(`/projects/${data.slug}`);
+                    }}
+                >
                     <button className={style.button}>READ MORE</button>
                 </div>
             </div>

@@ -810,6 +810,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
 
         interface Project implements Node {
             id: ID!
+            slug: String!
             title: String
             summary: String
             color: String
@@ -842,6 +843,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
 
         type kontent_item_project implements Node & Project @dontInfer {
             id: ID!
+            slug: String! @proxy(from: "elements.slug.value")
             title: String @proxy(from: "elements.title.value")
             summary: String @proxy(from: "elements.summary.value")
             color: String @proxy(from: "elements.color.value")

@@ -10,9 +10,9 @@ const ProjectsPage = ({ location }) => {
             allProject {
                 edges {
                     node {
+                        slug
                         title
                         summary
-                        color
                         subtitle
                         image {
                             gatsbyImageData
