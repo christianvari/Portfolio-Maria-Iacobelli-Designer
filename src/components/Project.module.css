@@ -7,18 +7,26 @@
     max-width: 1024px;
 }
 .right {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    gap: 1rem;
 }
 .right p {
     color: #000;
 }
+
 .button {
     background: #902eff;
-    height: 3rem;
+    height: 3.5rem;
     width: 10rem;
     color: white;
     cursor: pointer;
     border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: "Gentium Plus";
 }
 
 :global(.custom-theme-dark) .button {
@@ -26,7 +34,5 @@
 }
 
 .buttonContainer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-self: center;
 }

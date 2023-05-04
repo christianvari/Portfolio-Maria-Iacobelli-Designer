@@ -12,9 +12,9 @@ function Project({ data }) {
                 objectFit="scale-down"
             />
             <div className={style.right}>
-                <p style={{ fontWeight: "bold" }}>{data.title}</p>
-                <p style={{ fontSize: "1.5rem" }}>{data.subtitle}</p>
-                <p>{data.summary}</p>
+                <p style={{ fontWeight: "700" }}>{data.title}</p>
+                <p style={{ fontSize: "1.5rem", fontWeight: "400" }}>{data.subtitle}</p>
+                <p style={{ fontSize: "1rem", fontWeight: "400" }}>{data.summary}</p>
                 <div
                     className={style.buttonContainer}
                     onClick={() => {

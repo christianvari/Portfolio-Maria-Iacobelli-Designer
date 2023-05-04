@@ -14,6 +14,7 @@ const IndexPage = ({ location, data }) => {
                 <GatsbyImage
                     alt={home.image.alt}
                     image={getImage(home.image.gatsbyImageData)}
+                    objectFit="scale-down"
                 />
                 <div>
                     <h2>{home.greetings}</h2>
@@ -22,9 +23,9 @@ const IndexPage = ({ location, data }) => {
             </div>
             <div className={styles.desc}>
                 <p style={{ fontWeight: "bold" }}>{home.description}</p>
-                <p>{home.subdescription}</p>
+                <p className={styles.subdescription}>{home.subdescription}</p>
             </div>
-            <div>
+            <div className={styles.social}>
                 <Socials />
             </div>
         </Wrapper>
